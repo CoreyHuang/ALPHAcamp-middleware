@@ -6,7 +6,7 @@ const port = 3000
 app.use((req, res, next) => {
   // add time , URL and method
   const newDate = new Date()
-  let serverLog = newDate.getFullYear() + "-" + (newDate.getMonth() + 1) + "-" + newDate.getDate() + " " + newDate.getHours() + "-" + newDate.getMinutes() + "-" + newDate.getSeconds()
+  let serverLog = newDate.getFullYear() + "-" + (newDate.getMonth() + 1) + "-" + newDate.getDate() + " " + newDate.getHours() + ":" + newDate.getMinutes() + ":" + newDate.getSeconds()
   serverLog += ' | ' + req.method + " from " + "http://localhost:3000" + req.url
   console.log(serverLog)
   next()
